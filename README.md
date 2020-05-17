@@ -5,13 +5,6 @@
 ### Usage
 
 ```
-## Service Locator pattern - Deno
-
-[Service Locator Design Pattern](https://en.wikipedia.org/wiki/Service_locator_pattern)
-
-### Usage
-
-```
 import ServiceLocator from "https://deno.land/x/dislocator/mod.ts";
 
 const serviceLocator = new ServiceLocator();
@@ -32,7 +25,5 @@ function loadconfiguration(serviceLocator: ServiceLocator) {
 }
 
 loadconfiguration(serviceLocator); // logs: Loading credential for SECRET
-
-```
 
 ```
