@@ -4,7 +4,11 @@
 
 ### Usage
 
+##### Register services
+
 ```
+// serviceLocator.ts
+
 import ServiceLocator from "https://deno.land/x/dislocator/mod.ts";
 
 const serviceLocator = new ServiceLocator();
@@ -17,13 +21,16 @@ serviceLocator.register("loadConfig", (serviceLocator: ServiceLocator) => {
     return `Loading credential for ${config.key}`;
   };
 });
+```
+##### Use registerd services
+```
+// Otherfile.js
+// import serviceLocator from serviceLocator.ts file
 
-// Using the service locator different file
 function loadconfiguration(serviceLocator: ServiceLocator) {
   const loadConfig = serviceLocator.get("loadConfig");
   console.log(loadConfig());
 }
-
 loadconfiguration(serviceLocator); // logs: Loading credential for SECRET
 
 ```
