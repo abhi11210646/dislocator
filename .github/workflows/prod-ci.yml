@@ -28,4 +28,4 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Run test cases
-      run: deno test
+      run: /home/runner/.deno/bin/deno test
