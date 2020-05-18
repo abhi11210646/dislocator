@@ -46,7 +46,7 @@ import ServiceLocator from "https://deno.land/x/dislocator/mod.ts";
 
 const serviceLocator = new ServiceLocator();
 
-serviceLocator.register('config', myConfigObject);
+serviceLocator.register('config', {x:123});
  
 serviceLocator.use(require('./services/Services1'));
 serviceLocator.use(require('./services/Services2'));
@@ -67,7 +67,7 @@ export default function myServiceProvider1(serviceLocator) {
 ###### Services2
 ```
 // File: services/Services2.ts
-// import Service from service.ts file
+// import Service from myservice.ts file
 export default function myServiceProvider2(serviceLocator) {
   serviceLocator.register('myService2', () => {
     return {name:"service2"};
