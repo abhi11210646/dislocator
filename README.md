@@ -7,7 +7,7 @@
 ##### Register services
 
 ```
-// serviceLocator.ts
+// File: serviceLocator.ts
 
 import ServiceLocator from "https://deno.land/x/dislocator/mod.ts";
 
@@ -26,7 +26,7 @@ export default serviceLocator;
 ```
 ##### Use registered services
 ```
-// Otherfile.ts
+// File: Otherfile.ts
 // import serviceLocator from serviceLocator.ts file
 
 function loadconfiguration(serviceLocator: ServiceLocator) {
@@ -40,7 +40,7 @@ loadconfiguration(serviceLocator); // logs: Loading credential for SECRET
 #### Modularize Service registration
 ###### Register modules
 ```
-// serviceLocator.ts
+// File: serviceLocator.ts
 
 import ServiceLocator from "https://deno.land/x/dislocator/mod.ts";
 
@@ -64,7 +64,7 @@ export default function myServiceProvider1(serviceLocator) {
   });
 };
 ```
-###### Services1
+###### Services2
 ```
 // File: services/Services2.ts
 // import Service from service.ts file
